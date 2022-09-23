@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        {% include 'common/head.html' %}
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h3 class="text-center">ten phong ban</h3>
+        <table class="table table-bordered mt60">
+            <tr class="bg-darkgray text-bold td">
+                <td>Id</td>
+                <td>Tên nhân viên</td>
+                <td>Tuổi</td>
+            </tr>
+            <tbody>
+                {% for employee in employee_list %}
+                    <tr>
+                        <td>{{employee.employee_id}}</td>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.age}}</td>
+                        {% comment %} <td><a href="/description/{{description.department_id}}">Chi tiet</a></td> {% endcomment %}
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+
+        <script src="" async defer></script>
+    </body>
+</html>
